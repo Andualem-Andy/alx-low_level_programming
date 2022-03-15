@@ -1,21 +1,16 @@
+#include "alx.h"
+#include <unistd.h>
 /**
- *main -prints _putchar followed by new line
+ * _putchar - Writes the character c to stdout
+ * @c: The character to print
  *
- *program return (0)
+ * Return: On success 1.
+ * On error, -1 is returned, and error is set appropriately.
  */
+int _putchar(char c)
 
-#include<putchar.h>
-
-int main (void)
 {
 
-  _putchar('p');
-  _putchar('u');
-  _putchar('c');
-  _putchar('h');
-  _putchar('a');
-  _putchar('r');
-  _putchar('\n');
+return (write(1, &c, 1));
 
-  return(0)
 }
