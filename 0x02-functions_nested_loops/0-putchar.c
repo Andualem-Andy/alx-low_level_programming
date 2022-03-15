@@ -1,5 +1,5 @@
-#include <unistd.h>
-#include <main.h>
+#include <stdio.h>
+#include "main.h"
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -9,8 +9,9 @@
  */
 int main()
 {
-	int ch;
-	for(ch = 'A'; ch<='Z'; ch++)
-		putchar(ch);
-	   return 0;
+        int ch;
+        for(ch = 'A'; ch<='Z'; ch++)
+                putchar(ch);
+           return 0;
 }
+
