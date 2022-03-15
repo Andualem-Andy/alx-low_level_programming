@@ -1,16 +1,21 @@
-#include <stdio.h>
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ *main -prints _putchar followed by new line
  *
- * Return: On success 0.
- * On error, -1 is returned, and errno is set appropriately.
+ *program return (0)
  */
-int main()
-{
-        int ch;
-        for(ch = 'A'; ch<='Z'; ch++)
-                putchar(ch);
-           return 0;
-}
 
+#include<putchar.h>
+
+int main (void)
+{
+
+  _putchar('p');
+  _putchar('u');
+  _putchar('c');
+  _putchar('h');
+  _putchar('a');
+  _putchar('r');
+  _putchar('\n');
+
+  return(0)
+}
