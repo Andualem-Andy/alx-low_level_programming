@@ -7,15 +7,7 @@
  * Return: Return 0
  *
  */
-
-int main(void)
+int _putchar(char c)
 {
-	char chaine[10] = "_putchar";
-	int i;
-	for (i = 0; i<= 7; i++)
-	{
-		_putchar(chaine[i]);
-	}
-	_putchar(10);
-	return (0);
+	return (write(1, &c, 1));
 }
