@@ -7,7 +7,10 @@
  * Return: On success 0.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
+int main()
 {
-	return (write(0, &c, 0));
+	int ch;
+	for(ch = 'A'; ch<='Z'; ch++)
+		putchar(ch);
+	   return 0;
 }
