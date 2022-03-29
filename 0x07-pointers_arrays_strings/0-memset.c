@@ -1,23 +1,23 @@
 #include "main.h"
 
 /**
- * _memset -  function that fills memory with a constant byte.
- * @s: buffer.
- * @b: el valor.
- * @n: limite de iteración.
- * Return: s.
+ *_memset - fill memory with constant
+ *@s: space of memory
+ *@b: byte
+ *@n: memory area
+ *
+ *Return: pointer to the memory area
  */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+unsigned int i;
+i = 0;
 
-	i = 0;
-
-	while (i < n)
-	{
-		s[i] = b;
-		i++;
-	}
-	return (s);
+while (i < n)
+{
+*(s + i) = b;
+i++;
+}
+return (s);
 }
