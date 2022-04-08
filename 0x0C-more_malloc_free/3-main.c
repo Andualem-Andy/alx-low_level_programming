@@ -12,36 +12,36 @@
  */
 void simple_print_buffer(int *buffer, unsigned int size)
 {
-  unsigned int i;
+    unsigned int i;
 
-  i = 0;
-  while (i < size)
+    i = 0;
+    while (i < size)
     {
-      if (i % 10)
+        if (i % 10)
         {
-	  printf(" ");
+            printf(" ");
         }
-      if (!(i % 10) && i)
+        if (!(i % 10) && i)
         {
-	  printf("\n");
+            printf("\n");
         }
-      printf("0x%02x", buffer[i]);
-      i++;
+        printf("0x%02x", buffer[i]);
+        i++;
     }
-  printf("\n");
+    printf("\n");
 }
 
 /**
- * main - .
+ * main - check the code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-  int *a;
+    int *a;
 
-  a = array_range(0, 10);
-  simple_print_buffer(a, 11);
-  free(a);
-  return (0);
+    a = array_range(0, 10);
+    simple_print_buffer(a, 11);
+    free(a);
+    return (0);
 }
