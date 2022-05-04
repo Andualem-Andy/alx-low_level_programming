@@ -1,35 +1,38 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * create_file  - creates a file
- *@filename: the name of the file
- *@text_content: the content of the text
- * Return: Always 0.
+ * create_file - creates a file
+ * @filename: filename.
+ * @text_content: content writed in the file.
+ *
+ * Return: 1 if it success. -1 if it fails.
  */
 int create_file(const char *filename, char *text_content)
 {
-	long int i;
-	int filedes;
-	long int amount;
+	int fd;
+	int nletters;
+	int rwr;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	filedes = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
-	if (filedes < 0)
+	if (fd == -1)
 		return (-1);
 
-	if (text_content)
-	{
-		for (i = 0; text_content[i] != '\0'; i++)
-			;
-		amount = write(filedes, text_content, i);
+	if (!text_content)
+		text_content = "";
 
-		if (amount < 0 || amount != i)
-			return (-1);
-	}
-	if (close(filedes) < 0)
+	for (nletters = 0; text_content[nletters]; nletters++)
+		;
+
+	rwr = write(fd, text_content, nletters);
+
+	if (rwr == -1)
 		return (-1);
+
+	close(fd);
+
 	return (1);
 }
